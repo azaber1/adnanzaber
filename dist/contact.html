@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="contact.html" class="nav-link">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <style>
+      /* reset */
+      #fs-frm input,
+      #fs-frm select,
+      #fs-frm textarea,
+      #fs-frm fieldset,
+      #fs-frm optgroup,
+      #fs-frm label,
+      #fs-frm #card-element:disabled {
+        font-family: inherit;
+        font-size: 100%;
+        color: inherit;
+        border: none;
+        border-radius: 0;
+        display: block;
+        width: 75%;
+        padding: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      #fs-frm label,
+      #fs-frm legend,
+      #fs-frm ::placeholder {
+        font-size: 0.825rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0.2rem;
+        margin-left: 1.5rem;
+        display: flex;
+        align-items: baseline;
+      }
+
+      /* border, padding, margin, width */
+      #fs-frm input,
+      #fs-frm select,
+      #fs-frm textarea,
+      #fs-frm #card-element {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+      }
+      #fs-frm input:focus,
+      #fs-frm select:focus,
+      #fs-frm textarea:focus {
+        background-color: rgba(0, 0, 0, 0.2);
+        outline-style: solid;
+        outline-width: thin;
+        outline-color: gray;
+        outline-offset: -1px;
+      }
+      #fs-frm [type="text"],
+      #fs-frm [type="email"] {
+        width: 25%;
+      }
+      #fs-frm [type="button"],
+      #fs-frm [type="submit"],
+      #fs-frm [type="reset"] {
+        width: auto;
+        cursor: pointer;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+      }
+      #fs-frm [type="button"]:hover,
+      #fs-frm [type="submit"]:hover,
+      #fs-frm [type="reset"]:hover {
+        background-color: #eece1a;
+        opacity: 0.9;
+        transition: 0.3s;
+      }
+      #fs-frm [type="button"]:focus,
+      #fs-frm [type="submit"]:focus,
+      #fs-frm [type="reset"]:focus {
+        outline: none;
+      }
+      #fs-frm [type="submit"],
+      #fs-frm [type="reset"] {
+        cursor: pointer;
+      }
+      #fs-frm select {
+        text-transform: none;
+      }
+
+      #fs-frm [type="checkbox"] {
+        -webkit-appearance: checkbox;
+        -moz-appearance: checkbox;
+        appearance: checkbox;
+        display: inline-block;
+        width: auto;
+      }
+
+      #fs-frm [type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance: radio;
+        appearance: radio;
+      }
+    </style>
+
+    <h1 class="lg-heading" style="margin-left: 1rem;">
+      Contact <span class="text-secondary">Me</span>
+    </h1>
+
+    <form
+      id="fs-frm"
+      name="simple-contact-form"
+      accept-charset="utf-8"
+      action="https://formspree.io/mdowzyna"
+      method="post"
+    >
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          id="full-name"
+          placeholder="John Doe"
+          required=""
+        />
+        <label for="email-address">Email Address</label>
+        <input
+          type="email"
+          name="_replyto"
+          id="email-address"
+          placeholder="johndoe@email.com"
+          required=""
+        />
+        <label for="message">Message</label>
+        <textarea
+          rows="5"
+          name="message"
+          id="message"
+          placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          required=""
+        ></textarea>
+        <input
+          type="hidden"
+          name="_subject"
+          id="email-subject"
+          value="Contact Form Submission"
+        />
+      </fieldset>
+      <input class="btn" type="submit" value="Submit" />
+    </form>
+    <footer
+      style="position: absolute; bottom: 0; width: 100%;"
+      id="main-footer"
+    >
+      Copyright &copy; 2020
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
